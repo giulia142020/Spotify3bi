@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        img.findViewById(R.id.img_musica);
-        Glide.with(this).load("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPuvNi9yBZ98a4_zCNDA2JFPBnl8WQmhIXDg&usqp=CAU").into(img);
+        img = findViewById(R.id.img_musica);
+        Glide.with(this).load("https://img.youtube.com/vi/hpefredTUA8/0.jpg").into(img);
 
         player = MediaPlayer.create(getApplicationContext(), R.raw.poeiradas);
     }
