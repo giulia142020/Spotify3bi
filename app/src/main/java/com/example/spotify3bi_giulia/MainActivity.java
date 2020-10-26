@@ -11,21 +11,21 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     ImageView img;
-    MediaPlayer tocador;
+    MediaPlayer player;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         img.findViewById(R.id.img_musica);
-        Glide.with(this).load("https://img.youtube.com/vi/CIFrr1dqj5M/0.jpg").into(img);
+        Glide.with(this).load("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPuvNi9yBZ98a4_zCNDA2JFPBnl8WQmhIXDg&usqp=CAU").into(img);
 
-        tocador = MediaPlayer.create(getApplicationContext(), R.raw.house);
+        player = MediaPlayer.create(getApplicationContext(), R.raw.poeiradas);
     }
     protected void onResume(){
         super.onResume();
     }
 
     public void play(View view){
-        tocador.start();
+        player.start();
     }
 }
